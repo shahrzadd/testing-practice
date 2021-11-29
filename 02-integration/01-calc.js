@@ -1,21 +1,64 @@
 // ==================================================
 // DEFINE FUNCTION(S)
 // ==================================================
-function sum(num1, num2=0) {
-	return num1 + num2;
-}
+function sum(num1, num2) {
+        if (num1 == null && num2 == null) {
+          return 0;
+        } 
+        
+        else if(num2 == null) {
+          return num1;
+        }
+        
+        return num1 + num2;
+        }
 
-function difference(num1, num2=0) {
-        return num1 - num2;
-}
+      
+function difference(num1, num2) {
+        if (num1 == null && num2 == null) {
+          return 0;
+        } 
+        
+        else if (num2 == null) {
+          return num1;
+        } 
+        
+          return num1 - num2;
+        }
 
-function product(num1, num2=0) {
+
+function product(num1, num2) {
+        if (num1 == 0 || num2 == 0) {
+          return 0;
+        }
+      
+        if (num1 == null && num2 == null) {
+          return 0;
+        }
+      
+        else if (num2 == null) {
+          return num1;
+        }
+      
         return num1 * num2;
-}
+        }
+      
 
-function quotient(num1, num2=0) {
+function quotient(num1, num2) {
+         if (num2 == 0) {
+           return 'ERROR';
+        }
+
+          if (num1 == null && num2 == null) {
+           return 0;
+        }
+
+        else if (num2 == null) {
+           return num1;
+        }
+
         return num1 / num2;
-}
+        }
 
 function calc(operation, num1, num2) {
 	switch (operation) {
